@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2021 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,20 +16,17 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var abs = require( '@stdlib/math-base-special-abs' );
-
-
-// MAIN //
+import { ArrayLike } from '@stdlib/types/array';
 
 /**
 * Returns a boolean indicating if an array is row-major based on a provided stride array.
 *
-* @param {IntegerArray} strides - stride array
-* @returns {boolean} boolean indicating if an array is row-major
+* @param strides - integer stride array
+* @returns boolean indicating if an array is row-major
 *
 * @example
 * var bool = isRowMajor( [ 2, 1 ] );
@@ -38,28 +35,9 @@ var abs = require( '@stdlib/math-base-special-abs' );
 * bool = isRowMajor( [ 1, 2 ] );
 * // returns false
 */
-function isRowMajor( strides ) {
-	var ndims;
-	var s1;
-	var s2;
-	var i;
-
-	ndims = strides.length;
-	if ( ndims === 0 ) {
-		return false;
-	}
-	s1 = abs( strides[ 0 ] );
-	for ( i = 1; i < ndims; i++ ) {
-		s2 = abs( strides[ i ] );
-		if ( s2 > s1 ) {
-			return false;
-		}
-		s1 = s2;
-	}
-	return true;
-}
+declare function isRowMajor( strides: ArrayLike<number> ): boolean;
 
 
 // EXPORTS //
 
-module.exports = isRowMajor;
+export = isRowMajor;
