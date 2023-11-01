@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,74 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var isRowMajor = require( './../../dist' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof isRowMajor, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function returns a boolean indicating if an array is row-major based on a provided stride array', function test( t ) {
-	var strides;
-	var bool;
-
-	strides = [ 2, 1 ];
-	bool = isRowMajor( strides );
-	t.strictEqual( bool, true, 'returns expected value' );
-
-	strides = [ -2, 1 ];
-	bool = isRowMajor( strides );
-	t.strictEqual( bool, true, 'returns expected value' );
-
-	strides = [ 2, -1 ];
-	bool = isRowMajor( strides );
-	t.strictEqual( bool, true, 'returns expected value' );
-
-	strides = [ -2, -1 ];
-	bool = isRowMajor( strides );
-	t.strictEqual( bool, true, 'returns expected value' );
-
-	strides = [ 1, 3 ];
-	bool = isRowMajor( strides );
-	t.strictEqual( bool, false, 'returns expected value' );
-
-	strides = [ -1, 3 ];
-	bool = isRowMajor( strides );
-	t.strictEqual( bool, false, 'returns expected value' );
-
-	strides = [ 1, -3 ];
-	bool = isRowMajor( strides );
-	t.strictEqual( bool, false, 'returns expected value' );
-
-	strides = [ -1, -3 ];
-	bool = isRowMajor( strides );
-	t.strictEqual( bool, false, 'returns expected value' );
-
-	strides = [ 2, 2, 2, 1 ];
-	bool = isRowMajor( strides );
-	t.strictEqual( bool, true, 'returns expected value' );
-
-	strides = [ 2, 2, 2, 2 ];
-	bool = isRowMajor( strides );
-	t.strictEqual( bool, true, 'returns expected value' );
-
-	strides = [ 30, 10, 1 ];
-	bool = isRowMajor( strides );
-	t.strictEqual( bool, true, 'returns expected value' );
-
-	strides = [ 30, -10, 1 ];
-	bool = isRowMajor( strides );
-	t.strictEqual( bool, true, 'returns expected value' );
-
-	t.end();
-});
-
-tape( 'the function returns `false` if provided an empty stride array', function test( t ) {
-	var bool = isRowMajor( [] );
-	t.strictEqual( bool, false, 'returns expected value' );
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
