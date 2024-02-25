@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import isRowMajor from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-assert-is-row-major@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-base-assert-is-row-major/tags). For example,
+
+```javascript
 import isRowMajor from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-assert-is-row-major@v0.2.1-esm/index.mjs';
 ```
 
@@ -94,7 +99,7 @@ bool = isRowMajor( [ 1, 2 ] );
 <script type="module">
 
 import shape2strides from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-shape2strides@esm/index.mjs';
-import isRowMajor from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-assert-is-row-major@v0.2.1-esm/index.mjs';
+import isRowMajor from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-assert-is-row-major@esm/index.mjs';
 
 var shape = [ 10, 10, 10 ];
 
