@@ -2,6 +2,54 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2025-11-16)
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#8508](https://github.com/stdlib-js/stdlib/issues/8508)
+
+</section>
+
+<!-- /.issues -->
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`298b612`](https://github.com/stdlib-js/stdlib/commit/298b612c3406864fddd120b84a713f657cafd458) - **chore:** fix JavaScript lint errors [(#8509)](https://github.com/stdlib-js/stdlib/pull/8509) _(by kaushal-kumar-it)_
+-   [`6eee151`](https://github.com/stdlib-js/stdlib/commit/6eee15199727d04e3757e66f38384e97b8a333da) - **style:** fix indentation in JSON files _(by Philipp Burckhardt)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 2 people contributed to this release. Thank you to the following contributors:
+
+-   Philipp Burckhardt
+-   kaushal-kumar-it
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.2.2">
 
 ## 0.2.2 (2024-07-28)
